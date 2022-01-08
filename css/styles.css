@@ -1,0 +1,263 @@
+body {
+    background-color: hsl(24, 3.18%, 69.22%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main_screen {
+    height: 380px;
+    width: 660px;
+    position: absolute;
+}
+
+.selection_screen {
+    height: 390px;
+    width: 670px;
+}
+
+h1 {
+    margin-top: 0;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+ol {
+    font-family: 'Orbitron', sans-serif;
+    color: black;
+    background-color: hsl(24, 3.18%, 69.22%, .5);
+    font-size: 23px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h2 {
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.yes_square {
+    background-color: green;
+    position: fixed;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* .no_square{
+    background-color: red;
+    position: fixed;
+    bottom: 4%;
+    right: 35%;
+    transform: translate(-50%, -50%); 
+} */
+
+button {
+    font-family: 'Orbitron', sans-serif;
+    background: none;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+}
+
+/* ------------ Select Character Screen ----------*/
+
+.character-grid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    grid-gap: 20px;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-rows: 100px 100px;
+    grid-template-columns: 100px 100px 100px;
+}
+
+#Eevee {
+    height: 100px;
+    width: auto
+}
+
+#Bulbasaur {
+    height: 100px;
+    width: auto
+}
+
+#Charmander {
+    height: 100px;
+    width: auto
+}
+
+#Geodude {
+    height: 70px;
+    width: auto
+}
+
+#Pikachu {
+    height: 100px;
+    width: auto
+}
+
+#Squirtle {
+    height: 100px;
+    width: auto
+}
+
+.character-info {
+    position: fixed;
+    top: 30%;
+    height: 150px;
+    width: 150px;
+    border: 2px solid black;
+    background-color: hsl(24, 3.18%, 69.22%, .8);
+}
+
+.p-info {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10px;
+    position: relative;
+    left: 5px;
+    top: 5px;
+}
+
+.use-character {
+    position: relative;
+    top: 55%;
+    left: 10px;
+}
+
+#yes-use-character {
+    background-color: green;
+}
+
+#no-use-character {
+    background-color: red;
+}
+
+/*------------Game ---------------*/
+
+.playerStation {
+    width: 250px;
+    height: 200px;
+    float: left;
+    padding: 20px;
+    margin-left: 100px;
+}
+
+.cpuStation {
+    width: 250px;
+    height: 200px;
+    float: right;
+    padding: 20px;
+}
+
+.characterName {
+    position: absolute;
+    font-family: 'Orbitron', sans-serif;
+    bottom: 10px
+}
+
+.player {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    position: absolute;
+    bottom: 30px
+}
+
+.playerHP {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    position: absolute;
+    bottom: 45px;
+}
+
+.cpuHP {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    position: absolute;
+    bottom: 45px;
+}
+
+#player-charc-img {
+    position: absolute;
+    width: auto;
+    height: 150px;
+    left: 100px;
+    top: 70px;
+}
+
+#cpu-charc-img {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    right: 100px;
+    top: 70px;
+}
+
+.player-move {
+    font-family: 'Orbitron', sans-serif;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 90px;
+    height: 90px;
+    padding-top: 15px;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+}
+
+#attack {
+    background-color: hsl(24, 3.18%, 69.22%, .8);
+}
+
+#defend {
+    background-color: hsl(24, 3.18%, 69.22%, .8);
+}
+
+#heal {
+    background-color: hsl(24, 3.18%, 69.22%, .8);
+}
+
+.moveType{
+    position:absolute;
+    padding: 10px;
+    right: 10px;
+    background-color: hsl(24, 3.18%, 69.22%);;
+    color: black;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10px;
+    transition: 500ms ease-in;
+    border-radius: 5px;
+}
+
+/* END */
+
+.winner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 100px;
+    transition: 300ms ease-in;
+}
+
+.restart {
+    position: fixed;
+    left: 40%;
+    bottom: 10px;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 18px;
+}
