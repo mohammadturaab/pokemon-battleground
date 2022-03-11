@@ -131,6 +131,12 @@ button {
     left: 10px;
 }
 
+.cover-screen{
+    background-color: hsl(24, 3.18%, 69.22%, .5);
+    height: 390px;
+    width: 670px;
+}
+
 #yes-use-character {
     background-color: green;
 }

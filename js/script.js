@@ -131,20 +131,20 @@ $(".yes_square").on('click', function (e) {
 startScreen();
 
 const playerSelecting = () => {
-    console.log('player selector');
     $('body').on('click', function (e) {
         if (e.target.tagName != 'IMG') {
             return;
         };
-
+        //once event is clicked the bottom code will run to show pokemon attributes
         for (let i = 0; i < character.length; i++) {
             if (character[i].characterName === e.target.id) {
+                $('body').unbind();
                 const $characterSelected = $('<div class="character-info"></div>');
                 $characterSelected.append(`<p class="p-info">Name: ${character[i].characterName}`);
                 $characterSelected.append(`<p class="p-info">HP: ${character[i].hp}`);
                 $characterSelected.append(`<p class="p-info">Attack: ${character[i].attack}`);
                 $characterSelected.append(`<p class="p-info">Heal: ${character[i].heal}`);
-                // $characterSelected.append(`<p class="p-info">Special Attack: ${character[i].specialPower}`);
+
                 $characterSelected.insertAfter($('.character-grid'));
                 const $useCharacter = $('<div class="use-character"></div');
                 $useCharacter.append('<button id="yes-use-character">USE</button>');
@@ -160,27 +160,28 @@ const playerSelecting = () => {
                 $("body").on('click', '#no-use-character', function () {
                     $characterSelected.remove();
                     $useCharacter.remove();
+                    $('body').bind('click', playerSelecting());
                 })
                 $useCharacter.insertAfter($('.character-info'));
             }
-        }
-    });
+    }
+});
+    
 }
 const cpuSelector = () => {
     $('body').on('click', function (e) {
-
         if (e.target.tagName != 'IMG') {
             return;
         };
 
         for (let i = 0; i < character.length; i++) {
             if (character[i].characterName === e.target.id) {
+                $('body').unbind();
                 const $characterSelected = $('<div class="character-info"></div>');
                 $characterSelected.append(`<p class="p-info">Name: ${character[i].characterName}`);
                 $characterSelected.append(`<p class="p-info">HP: ${character[i].hp}`);
                 $characterSelected.append(`<p class="p-info">Attack: ${character[i].attack}`);
                 $characterSelected.append(`<p class="p-info">Heal: ${character[i].heal}`);
-                // $characterSelected.append(`<p class="p-info">Special Attack: ${character[i].specialPower}`);
 
                 $characterSelected.insertAfter($('.character-grid'));
                 const $useCharacter = $('<div class="use-character"></div');
@@ -196,6 +197,7 @@ const cpuSelector = () => {
                 $("body").on('click', '#no-use-character', function () {
                     $characterSelected.remove();
                     $useCharacter.remove();
+                    $('body').bind('click', playerSelecting());
                 })
                 $useCharacter.insertAfter($('.character-info'));
             }
@@ -350,4 +352,8 @@ const restart = () => {
     $('.restart').click( function () {
         location.reload();
     })
+}
+
+function buttonClick() {
+    setTimeout('$("#btn").removeAttr("disabled")', 1500);
 }
